@@ -27,6 +27,8 @@ Parsing has been tested on Intel i5-6600 @ 3.30GHz (4 cores/4 threads), 16 GB RA
 <p>- times are taken in microseconds using QueryPerformanceCounter() in main execution thread<br>
 - memory usage is taken after parsing finished, from Task-Manager/Processes tab for concrete process<br>
 
+Raw parse speed:
+
 | Test  | mdz_xml (speed) | mdz_xml (memory) | Rapid-XML|TinyXML-2|MSXML 6.0|
 | :---:| ---: | ---: | ---: | ---: | ---: |
 | **800 MB**| |||||
