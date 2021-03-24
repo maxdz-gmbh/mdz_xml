@@ -42,3 +42,15 @@ Parsing has been tested on Intel i5-6600 @ 3.30GHz (4 cores/4 threads), 16 GB RA
 | speed,  μs | parse failed| **4,183,155** |crash | crash| 43,348,381 |
 | memory, MB | | **9267.0** | | | 10810.6 |
 
+"Load file - parse - unload data" test scenario:
+
+| Test  | mdz_xml (speed) | mdz_xml (memory) | Rapid-XML|TinyXML-2|MSXML 6.0|
+| :---:| ---: | ---: | ---: | ---: | ---: |
+| **800 MB**| |||||
+| speed,  μs| **1,715,889**   |1,857,110|6,517,744|9,241,000|17,759,569|
+| **1.5 GB** | |  | | |  |
+| speed,  μs | **3,303,318**| 3,404,751 |18,256,977 | 18,200,126| 31,622,254 |
+| **2.1 GB** | |  | | |  |
+| speed,  μs | **3,248,350**| 3,533,602 |crash | 12,404,694| 28,289,604 |
+| **2.7 GB** | |  | | |  |
+| speed,  μs | parse failed| **9,688,218** |crash | crash| 57,976,988 |
