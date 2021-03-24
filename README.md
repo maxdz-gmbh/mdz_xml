@@ -4,16 +4,16 @@ Performance comparison tables give an idea about **mdz_xml** parsing overall per
 
 Following tests are executed:
 
-- parsing of ~800 MB large XML file<br>
+<p>- parsing of ~800 MB large XML file<br>
 http://dumps.wikimedia.your.org/wikidatawiki/20210320/wikidatawiki-20210320-stub-articles6.xml.gz
 
-- parsing of ~1.5 GB large XML file<br>
+<p>- parsing of ~1.5 GB large XML file<br>
 http://dumps.wikimedia.your.org/wikidatawiki/20210320/wikidatawiki-20210320-stub-meta-current16.xml.gz
 
-- parsing of ~2.1 GB large XML file<br>
+<p>- parsing of ~2.1 GB large XML file<br>
 http://dumps.wikimedia.your.org/commonswiki/20210320/commonswiki-20210320-pages-meta-current4.xml-p53620252p55120251.bz2
 
-- parsing of ~2.7 GB large XML file<br>
+<p>- parsing of ~2.7 GB large XML file<br>
 http://dumps.wikimedia.your.org/wikidatawiki/20210320/wikidatawiki-20210320-stub-meta-current18.xml.gz
 
 Parsing has been tested on Intel i5-6600 @ 3.30GHz (4 cores/4 threads), 16 GB RAM, Windows 10 (64-bit) OS.
