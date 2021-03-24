@@ -29,7 +29,7 @@ Parsing has been tested on Intel i5-6600 @ 3.30GHz (4 cores/4 threads), 16 GB RA
 
 Raw parse speed:
 
-| Test  | mdz_xml (speed) | mdz_xml (memory) | Rapid-XML|TinyXML-2|MSXML 6.0|
+| Test  | mdz_xml<br>(speed) | mdz_xml<br>(memory) | Rapid-XML|TinyXML-2|MSXML 6.0|
 | :---:| ---: | ---: | ---: | ---: | ---: |
 | **800 MB**| |||||
 | speed,  μs| **1,156,537**   |1,266,299|1,693,287|7,303,490|13,327,359|
