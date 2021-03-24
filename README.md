@@ -22,7 +22,7 @@ Parsing has been tested on Intel i5-6600 @ 3.30GHz (4 cores/4 threads), 16 GB RA
 - Rapid-XML (latest version 1.13), used from sources in test-code, built in VC++ toolset v100/64bit<br>
 - TinyXML-2 (latest version on 23.03.2021), used from sources in text-code, built in VC++ toolset v100/64bit<br>
 (only actual parsing time in Parse() function is measured for TinyXML-2)<br>
-- MSXML 6.0 (6.30.18362.418), used via IXMLDOMDocument in test-code, built in VC++ toolset v100/64bit<p>
+- MSXML 6.0 (6.30.18362.418), used via IXMLDOMDocument in test-code, built in VC++ toolset v100/64bit
 
 <p>- times are taken in microseconds using QueryPerformanceCounter() in main execution thread<br>
 - memory usage is taken after parsing finished, from Task-Manager/Processes tab for concrete process<br>
