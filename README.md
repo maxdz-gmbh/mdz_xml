@@ -46,7 +46,7 @@ Raw parse speed:
 
 "Load file - parse - unload data" test scenario:
 
-| Test  | mdz_xml (speed) | mdz_xml (memory) | Rapid-XML|TinyXML-2|MSXML 6.0|
+| Test  | mdz_xml<br>(speed) | mdz_xml<br>(memory) | Rapid-XML|TinyXML-2|MSXML 6.0|
 | :---:| ---: | ---: | ---: | ---: | ---: |
 | **800 MB**| |||||
 | speed,  μs| **1,715,889**   |1,857,110|6,517,744|9,241,000|17,759,569|
