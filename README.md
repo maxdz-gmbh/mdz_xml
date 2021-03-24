@@ -16,13 +16,14 @@ http://dumps.wikimedia.your.org/commonswiki/20210320/commonswiki-20210320-pages-
 <p>- parsing of ~2.7 GB large XML file<br>
 http://dumps.wikimedia.your.org/wikidatawiki/20210320/wikidatawiki-20210320-stub-meta-current18.xml.gz
 
-Parsing has been tested on Intel i5-6600 @ 3.30GHz (4 cores/4 threads), 16 GB RAM, Windows 10 (64-bit) OS.
+Parsing has been tested on Intel i5-6600 @ 3.30GHz (4 cores/4 threads), 16 GB RAM, Windows 10 (64-bit) OS.<br>
+Build using VC++, toolset v100/64bit.
 
-<p>- mdz_xml (ver. 0.1) is built in VC++ toolset v100/64bit and used as static library in test-code, built in VC++ toolset v100/64bit<br>
-- Rapid-XML (latest version 1.13), used from sources in test-code, built in VC++ toolset v100/64bit<br>
-- TinyXML-2 (latest version on 23.03.2021), used from sources in text-code, built in VC++ toolset v100/64bit<br>
+<p>- mdz_xml (ver. 0.1) is used as static library in test-code<br>
+- Rapid-XML (latest version 1.13), used from sources in test-code<br>
+- TinyXML-2 (latest version on 23.03.2021), used from sources in text-code<br>
 (only actual parsing time in Parse() function is measured for TinyXML-2)<br>
-- MSXML 6.0 (6.30.18362.418), used via IXMLDOMDocument in test-code, built in VC++ toolset v100/64bit
+- MSXML 6.0 (6.30.18362.418), used via IXMLDOMDocument in test-code/64bit
 
 <p>- times are taken in microseconds using QueryPerformanceCounter() in main execution thread<br>
 - memory usage is taken after parsing finished, from Task-Manager/Processes tab for concrete process<br>
