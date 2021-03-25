@@ -10,8 +10,8 @@ http://dumps.wikimedia.your.org/wikidatawiki/20210320/wikidatawiki-20210320-stub
 <p>- parsing of ~1.5 GB large XML file<br>
 http://dumps.wikimedia.your.org/wikidatawiki/20210320/wikidatawiki-20210320-stub-meta-current16.xml.gz
 
-<p>- parsing of ~2.1 GB large XML file<br>
-http://dumps.wikimedia.your.org/commonswiki/20210320/commonswiki-20210320-pages-meta-current4.xml-p53620252p55120251.bz2
+<p>- parsing of ~2.0 GB large XML file<br>
+http://dumps.wikimedia.your.org/enwiki/20210320/enwiki-20210320-stub-meta-current20.xml.gz
 
 <p>- parsing of ~2.7 GB large XML file<br>
 http://dumps.wikimedia.your.org/wikidatawiki/20210320/wikidatawiki-20210320-stub-meta-current18.xml.gz
@@ -19,7 +19,7 @@ http://dumps.wikimedia.your.org/wikidatawiki/20210320/wikidatawiki-20210320-stub
 Parsing has been tested on Intel i5-6600 @ 3.30GHz (4 cores/4 threads), 16 GB RAM, Windows 10 (64-bit) OS.<br>
 Build using VC++, toolset v100/64bit.
 
-<p>- mdz_xml (ver. 0.1) is used as static library in test-code<br>
+<p>- mdz_xml (ver. 0.1) is used as shared library (dll) in test-code<br>
 - Rapid-XML (latest version 1.13), used from sources in test-code<br>
 - TinyXML-2 (latest version on 23.03.2021), used from sources in text-code<br>
 (only actual parsing time in Parse() function is measured for TinyXML-2)<br>
@@ -30,20 +30,20 @@ Build using VC++, toolset v100/64bit.
 
 Raw parse speed:
 
-| Test  | mdz_xml<br>(speed) | mdz_xml<br>(memory) | Rapid-XML|TinyXML-2|MSXML 6.0|
+| Test  | mdz_xml_parse()<br>(memory) | mdz_xml_parse<br>(speed) | mdz_xml_parseWritable()<br>(memory) | mdz_xml_parseWritable<br>(speed) | Rapid-XML|TinyXML-2|MSXML 6.0|pugiXml|
 | :---:| ---: | ---: | ---: | ---: | ---: |
 | **800 MB**| |||||
-| speed,  μs| **1,156,537**   |1,266,299|1,693,287|7,303,490|13,327,359|
-| memory, MB| 3759.4   |**2967.0**|4530.5|5477.5|3428.5|
+| speed,  μs| 1,151,826   |1,083,251|1,040,145|**885,727**|1,686,864|7,424,695|12,940,236|1,243,289
+| memory, MB| 2605.3      |3397.6   |**2429.8**   |2504.1 |4530.5   |5477.5   |3428.5    |3298.5
 | **1.5 GB** | |  | | |  |
-| speed,  μs | **2,015,650**| 2,224,795 |3,035,618 | 12,905,802| 22,664,047 |
-| memory, MB | 6612.7| **5231.3** |7951.3 | 9601.6| 6095.3 |
-| **2.1 GB** | |  | | |  |
-| speed,  μs | **1,697,668**| 2,036,900 |crash | 9,066,542| 22,111,194 |
-| memory, MB | 5146.1| **4331.4** | | 6978.0| 6107.5 |
+| speed,  μs | 1,984,213| 1,918,416 |1,809,865 | **1,573,526**| 2,965,762 |12,958,705|22,529,768|2,181,464|
+| memory, MB | 4600.0   | 5981.3    |**4294.2**| 4423.3       | 7951.3 | 9601.6      |6095.3    |5806.0   |
+| **2.0 GB** | |  | | |  |
+| speed,  μs | 3,115,848| 2,895,025 |2,702,707   | **2,378,931**| crash | crashes | 32,466,422|3,428,855|
+| memory, MB | 6283.8   | 8195.9    | **5862.1** | 6039.7       |       |         |8279.7     |7911.0|
 | **2.7 GB** | |  | | |  |
-| speed,  μs | parse failed| **4,183,155** |crash | crash| 43,348,381 |
-| memory, MB | | **9267.0** | | | 10810.6 |
+| speed,  μs | 3886709 | parse failed| 3576868    |**3,176,886** | crash| crash |43,521,423 |4,124,275|
+| memory, MB | 8162.1  |             | **7626.9** | 7852.9       |      |       |10809.6    |10274.6|
 
 "Load file - parse - unload data" test scenario:
 
