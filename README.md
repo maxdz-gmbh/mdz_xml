@@ -30,7 +30,7 @@ Build using VC++, toolset v100/64bit.
 
 Raw parse speed:
 
-| Test  | mdz_xml<br>parse() | mdz_xml<br>parseWritable() | Rapid-XML|TinyXML-2|MSXML 6.0|pugiXml|
+| Test  | mdz_xml_parse() | mdz_xml_parseWritable() | Rapid-XML|TinyXML-2|MSXML 6.0|pugiXml|
 | :---: | ---:               | ---:                        | ---:       | ---:           | ---:            | ---:    |
 | **800 MB**|                |                             |            |                 |            |          |
 | speed,  μs| 965,468       |**830,137**               |1,686,864     |7,424,695     |12,940,236     |1,243,289 |
@@ -47,7 +47,7 @@ Raw parse speed:
 
 "Load file - parse - unload data" test scenario:
 
-| Test<br>speed, μs  | mdz_xml_<br>parseFile() | Rapid-XML|TinyXML-2|MSXML 6.0|pugiXml|
+| Test<br>speed, μs  | mdz_xml_parseFile() | Rapid-XML|TinyXML-2|MSXML 6.0|pugiXml|
 | :---:              | ---:                    | ---:      | ---:    | ---:    | ---: |
 | **800 MB**         | **1,373,711**          |6,586,134   |9,278,020|16,457,514|1,899,272|
 | **1.5 GB**        |  **2,439,384**          |16,474,472 | 16,493,514| 29,422,628 |3,515,159|
