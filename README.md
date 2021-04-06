@@ -153,7 +153,8 @@ After library initialization call *[mdz_xml_create]*() for xml-parser creation. 
 
 int main(int argc, char* argv[])
 {
-  mdz_bool bRet = mdz_xml_init("<first-name-hash>", "<last-name-hash>", "<email-hash>", "<license-hash>");   /* initialize mdz_xml library */
+  /* initialize mdz_xml library */
+  mdz_bool bRet = mdz_xml_init("<first-name-hash>", "<last-name-hash>", "<email-hash>", "<license-hash>");
   
   struct mdz_Xml* pXml = mdz_xml_create(); /* create xml-parser */
   ...
