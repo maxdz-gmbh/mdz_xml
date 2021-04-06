@@ -143,8 +143,8 @@ int main(int argc, char* argv[])
 }
 ```
 
-[mdz_xml_create]: https://github.com/maxdz-gmbh/mdz_ansi/wiki/mdz_xml_create
-[mdz_xml_destroy]: https://github.com/maxdz-gmbh/mdz_ansi/wiki/mdz_xml_destroy
+[mdz_xml_create]: https://github.com/maxdz-gmbh/mdz_xml/wiki/mdz_xml_create
+[mdz_xml_destroy]: https://github.com/maxdz-gmbh/mdz_xml/wiki/mdz_xml_destroy
 
 After library initialization call *[mdz_xml_create]*() for xml-parser creation. There should be also symmetric *[mdz_xml_destroy]*() call for every create, otherwise allocated for xml-parser memory remains occupied:
 
