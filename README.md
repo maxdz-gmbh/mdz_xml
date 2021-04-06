@@ -108,3 +108,95 @@ Raw parse speed:
 | **1.5 GB**        |  **2,439,384**          |16,474,472 | 16,493,514| 29,422,628 |3,515,159|
 | **2.0 GB**        | **3,388,064**          |crash | crash| 43,360,017 |5,411,959|
 | **2.7 GB**        | **4,406,550**          |crash | crash| 58,679,884 |9,551,191|
+
+## mdz_xml Usage
+
+**Test license generation:** - in order to get free test-license, please proceed to our Shop page [maxdz Shop] and register an account. After registration you will be able to obtain free 14-days test-licenses for our products using "Obtain for free" button. 
+Test license data should be used in *mdz_xml_init()* call for library initialization.
+
+**NOTE:** All 0.x releases are kind of "beta-versions" and can be used 1) only with test-license (during test period of 14 days, with necessity to re-generate license for the next 14 days test period) and 2) without expectations of interface backward-compatibility.
+
+Several usage-scenarios are possible:
+- low-level - raw C interface, using *mdz_xml.h* header file
+- higher-level - using *MdzXml* C++ "wrapper" around *mdz_xml.h* functions
+
+[mdz_xml Wiki]: https://github.com/maxdz-gmbh/mdz_xml/wiki/mdz_xml-overview
+[maxdz Shop]: https://maxdz.com/shop.php
+
+#### Code Example (low-level use)
+
+*mdz_xml_init()* with license information should be called for library initialization before any subsequent calls:
+
+```
+#include <mdz_xml.h>
+
+int main(int argc, char* argv[])
+{
+  /* mdz_xml library initialization using license info retrieved after license generation (see "Test license generation" above) */
+  
+  mdz_bool bRet = mdz_xml_init("<first-name-hash>", "<last-name-hash>", "<email-hash>", "<license-hash>");
+  ...
+  
+  mdz_xml_uninit(); /* call for un-initialization of library */
+  
+  return 0;
+}
+```
+
+[mdz_xml_create]: https://github.com/maxdz-gmbh/mdz_ansi/wiki/mdz_xml_create
+[mdz_xml_destroy]: https://github.com/maxdz-gmbh/mdz_ansi/wiki/mdz_xml_destroy
+
+After library initialization call *[mdz_xml_create]*() for xml-parser creation. There should be also symmetric *[mdz_xml_destroy]*() call for every create, otherwise allocated for xml-parser memory remains occupied:
+
+```
+#include <mdz_xml.h>
+
+int main(int argc, char* argv[])
+{
+  mdz_bool bRet = mdz_xml_init("<first-name-hash>", "<last-name-hash>", "<email-hash>", "<license-hash>");   /* initialize mdz_xml library */
+  
+  struct mdz_Xml* pXml = mdz_xml_create(); /* create xml-parser */
+  ...
+  ...
+  /* use pXml */
+  ...
+  ...
+  /* destroy pXml */
+  
+  mdz_xml_destroy(&pXml); /* after this pXml should be NULL */
+  
+  mdz_xml_uninit(); /* un-initialize mdz_xml library */
+
+  ...
+}
+```
+
+Use *mdz_Xml** pointer for parsing text from file:
+
+```
+#include <mdz_xml.h>
+
+int main(int argc, char* argv[])
+{
+  mdz_bool bRet = mdz_xml_init("<first-name-hash>", "<last-name-hash>", "<email-hash>", "<license-hash>");
+  
+  struct mdz_Xml* pAnsi = mdz_xml_create();
+
+  /* parse file "test.xml */
+  
+  bRet = mdz_xml_parseFile(pXml, "test.xml", mdz_true);
+ 
+  ...
+  
+  mdz_xml_destroy(&pXml);
+  
+  mdz_xml_uninit();
+  ...
+}
+```
+
+## Licensing info
+
+Use of **mdz_xml** library is regulated by license agreement in *LICENSE.txt*
+
+Basically private non-commercial "test" usage is unrestricted. Commercial usage of library (incl. its source code) will be regulated by according license agreement.
