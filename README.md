@@ -1,3 +1,57 @@
+**NOTE:** All 0.x releases are kind of "alpha-versions" without expectations of interface backward-compatibility.
+
+## Table of Contents
+[mdz_xml Overview](#mdz_xml-Overview)<br>
+[mdz_xml Advantages](#mdz_xml-Advantages)<br>
+[Performance Comparison](#performance-comparison)<br>
+[mdz_xml Usage](#mdz_xml-Usage)<br>
+[Licensing info](#Licensing-info)<br>
+
+## mdz_xml Overview
+Wiki: [mdz_ansi Wiki]<br>
+file: *"mdz_xml.h"*
+
+Please take a look at *"mdz_xml.h"* file or [mdz_xml Wiki] site for detailed functions descriptions.
+
+[mdz_xml Wiki]: https://github.com/maxdz-gmbh/mdz_xml/wiki/mdz_xml-overview
+
+[mdz_xml] - is a very lightweight, versatile and speedy C  library for  parsing XML-documents, building DOM-structure and navigating it. The library is developed by [maxdz Software GmbH]. Source code of library is highly-portable, conforms to ANSI C 89/90 Standard.
+
+Only shared/dynamically loaded libraries (*.so* and *.dll* files with import libraries) are available for evaluation testing purposes. Static libraries are covered by our commercial licenses.
+
+**Linux** binaries are built against Linux Kernel 2.6.18 - and thus should be compatible with Debian (from ver. 4.0), Ubuntu (from ver. 8.04), Fedora (from ver. 9)
+
+**FreeBSD** binaries - may be used from FreeBSD ver. 7.0
+
+**Win32** binaries are built using Visual Studio Platform Toolset "v90", thus are compatible with Windows versions from Windows 2000.<br>
+**Win64** binaries are built using Visual Studio Platform Toolset "v100", thus are compatible with Windows versions from Windows XP.<br>
+
+**Android** x86/armeabi-v7a binaries - may be used from Android API level 16 ("Jelly Bean" ver. 4.1.x)<br>
+**Android** x86_64/arm64-v8a binaries - may be used from Android API level 21 ("Lollipop" ver. 5.0)
+
+**macOS** binaries - x86_64, from *MacOS X v10.6.0*
+
+[mdz_xml]: https://github.com/maxdz-gmbh/mdz_xml
+[maxdz Software GmbH]: https://maxdz.com/
+
+## mdz_xml Advantages
+
+**1. High portability:** the whole code conforms to ANSI C 89/90 Standard.
+
+**2. Little dependencies:** basically *mdz_xml* functions are only dependend on standard C-library memory-management/access functions. It means you can use library in your code without any further dependencies except standard platform libraries/APIs.
+
+**3. Very fast:** the parser is ca. 50% faster and needs ca. 40% less memory than pugiXml (which is considered as one of the fastest parsers overall). And is ca. 20 times faster than of "MSXML" from Microsoft. Please take a look at comparison tables below [Performance Comparison](#performance-comparison).
+
+**4. Parsing of very large XML-documents:** basically, for 64-bit version the only limitation is your available RAM. Still the parser uses memory very effectively, thus parsing of very large files (we mean 2 GB large and bigger files here) is still possible using mdz_xml with a 50% less RAM-consumption than "pugiXML" or "MSXML" (which are very memory-effective too).
+
+**5. Parse error position:** you are getting position of invalid (non-parced) character in XML-document if there is parse error.
+
+**6. Flexibility:** you can parse read-only XML-documents. You can parse writable XML-documents even faster and with less memory-consumption than read-only parse. You can parse files - our file reading is very fast too.
+
+**7. Navigation:** you can navigate through XML DOM-structure to collect necessary information from elements/children, attributes or texts.
+
+**8. Control:** you can allow/disallow characters to be parsed in element names, attributes, texts, etc. Parser itself handles <?..?> instructions, <!--...--> comments, and mixed content
+
 ## Performance Comparison
 
 Performance comparison tables give an idea about **mdz_xml** parsing overall performance compared to some well-known alternatives.
