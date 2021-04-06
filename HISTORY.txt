@@ -1,0 +1,20 @@
+06.04.2021 (tue): Release 0.1
+-----------------------------
+
+Added functions:
+
+- mdz_xml_init
+- mdz_xml_uninit
+- mdz_xml_create
+- mdz_xml_destroy
+
+- mdz_xml_parse
+- mdz_xml_parseWritable
+- mdz_xml_parseFile
+
+- mdz_xml_allowLetter
+- mdz_xml_isAllowedLetter
+
+- mdz_xml_getRootElement
+- mdz_xml_getElement
+- mdz_xml_getAttribute
