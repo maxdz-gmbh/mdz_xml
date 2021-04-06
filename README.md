@@ -19,11 +19,12 @@ http://dumps.wikimedia.your.org/wikidatawiki/20210320/wikidatawiki-20210320-stub
 Parsing has been tested on Intel i5-6600 @ 3.30GHz (4 cores/4 threads), 16 GB RAM, Windows 10 (64-bit) OS.<br>
 Build using VC++, toolset v100/64bit.
 
-<p>- mdz_xml (ver. 0.1) is used as shared library (dll) in test-code<br>
-- Rapid-XML (latest version 1.13), used from sources in test-code<br>
-- TinyXML-2 (latest version on 23.03.2021), used from sources in text-code<br>
+<p>- mdz_xml (ver. 0.1) is used as shared library (dll)<br>
+- Rapid-XML (latest version 1.13), used from sources<br>
+- TinyXML-2 (latest version on 23.03.2021), used from sources<br>
 (only actual parsing time in Parse() function is measured for TinyXML-2)<br>
-- MSXML 6.0 (6.30.18362.418), used via IXMLDOMDocument in test-code/64bit
+- MSXML 6.0 (6.30.18362.418), used via IXMLDOMDocument interface<br>
+- pugiXml (latest version on 23.03.2021), used from sources
 
 <p>- times are taken in microseconds using QueryPerformanceCounter() in main execution thread<br>
 - memory usage is taken after parsing finished, from Task-Manager/Processes tab for concrete process<br>
