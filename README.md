@@ -100,14 +100,19 @@ Raw parse speed:
 | speed,  μs | 3,148,216| **2,682,474**           | crash           | crash        |43,521,423 |4,124,275|
 | memory, MB | 6403.0  |  **5738.1**              |                 |              |10809.6    |10274.6|
 
-"Load file - parse - unload data" test scenario:
+"Load file - parse - unload data" test scenario ("warm" cache):
 
-| Test<br>speed, μs  | mdz_xml_<br>parseFile() | Rapid-XML|TinyXML-2|MSXML 6.0|pugiXml|
+| Test<br>speed, μs  | mdz_xml_<br>parseFile()<br>writable | Rapid-XML|TinyXML-2|MSXML 6.0|pugiXml|
 | :---:              | ---:                    | ---:      | ---:    | ---:    | ---: |
 | **800 MB**         | **1,373,711**          |6,586,134   |9,278,020|16,457,514|1,899,272|
 | **1.5 GB**        |  **2,439,384**          |16,474,472 | 16,493,514| 29,422,628 |3,515,159|
 | **2.0 GB**        | **3,388,064**          |crash | crash| 43,360,017 |5,411,959|
 | **2.7 GB**        | **4,406,550**          |crash | crash| 58,679,884 |9,551,191|
+
+"Load file - parse - unload data" test scenario ("cold" cache):
+| Test<br>speed, μs  | mdz_xml_<br>parseFile()<br>writable | Rapid-XML|TinyXML-2|MSXML 6.0|pugiXml|
+| :---:              | ---:                    | ---:      | ---:    | ---:    | ---: |
+| **1.5 GB**         | **4,924,833**          |19,006,339   |20,971,263|31,736,102|6,729,579|
 
 ## mdz_xml Usage
 
