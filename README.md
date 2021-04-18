@@ -54,7 +54,7 @@ Only shared/dynamically loaded libraries (*.so* and *.dll* files with import lib
 
 ## Performance Comparison
 
-Performance comparison tables give an idea about **mdz_xml** parsing overall performance compared to some well-known alternatives.
+Performance comparison tables give an idea about **mdz_xml** parsing overall performance compared to some well-known C/C++ alternatives.
 
 Following tests are executed:
 
