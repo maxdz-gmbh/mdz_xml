@@ -116,7 +116,7 @@ Raw parse speed:
 
 ## mdz_xml Usage
 
-**Test license generation:** - please contact us for retrieving binaries and free test-license. It is decided on case-by-case basis.
+**Test license generation:** please contact us for retrieving binaries and free test-license. It is decided on case-by-case basis.
 <br/>Test license data should be used in *mdz_xml_init()* call for library initialization.
 
 **NOTE:** All 0.x releases are kind of "beta-versions" and can be used 1) only with test-license (during test period, with necessity to re-generate license for the next test period) and 2) without expectations of interface backward-compatibility.
