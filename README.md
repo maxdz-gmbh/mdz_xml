@@ -116,14 +116,15 @@ Raw parse speed:
 
 ## mdz_xml Usage
 
-**Test license generation:** - in order to get free test-license, please proceed to our Shop page [maxdz Shop] and register an account. After registration you will be able to obtain free 14-days test-licenses for our products using "Obtain for free" button. 
-Test license data should be used in *mdz_xml_init()* call for library initialization.
+**Test license generation:** - in order to get free test-license, <s>please proceed to our Shop page [maxdz Shop] and register an account. After registration you will be able to obtain free 14-days test-licenses for our products using "Obtain for free" button.</s>
+please contact us for retrieving binaries and free test-license. It is decided on case-by-case basis.
+<br/>Test license data should be used in *mdz_xml_init()* call for library initialization.
 
 **NOTE:** All 0.x releases are kind of "beta-versions" and can be used 1) only with test-license (during test period of 14 days, with necessity to re-generate license for the next 14 days test period) and 2) without expectations of interface backward-compatibility.
 
 Several usage-scenarios are possible:
 - low-level - raw C interface, using *mdz_xml.h* header file
-- higher-level - using *MdzXml* C++ "wrapper" around *mdz_xml.h* functions
+- higher-level - using C++ "wrapper" around *mdz_xml.h* functions
 
 [mdz_xml Wiki]: https://github.com/maxdz-gmbh/mdz_xml/wiki/mdz_xml-overview
 [maxdz Shop]: https://maxdz.com/shop.php
